@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useDispatch , useSelector} from "react-redux";
 import { fetchProducts } from "../../store/actions/productActions";
 import Product from "../Product";
-import ReactPaginate from 'react-paginate'
 
 const ProductListing = () => {
   const dispatch = useDispatch();

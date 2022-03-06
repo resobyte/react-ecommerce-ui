@@ -1,5 +1,5 @@
 import services from "../../services/services";
-import { ActionTypes } from "../contants/action-types";
+import { ActionTypes } from "../constants/action-types";
 
 export const fetchProducts = () => async (dispatch) => {
   const response = await services.get("/v1/api/products");
