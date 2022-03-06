@@ -26,7 +26,7 @@ const ProductComponent = ({ searchTerm, pagesVisited, productPerPage }) => {
             <div className="ui link cards">
               <div className="card">
                 <div className="image">
-                  <img src={src} alt={title} />
+                  <img src={src} alt={title} loading="lazy"/>
                 </div>
                 <div className="content">
                   <div className="header">{title}</div>

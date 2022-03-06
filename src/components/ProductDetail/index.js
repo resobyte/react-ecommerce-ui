@@ -36,6 +36,7 @@ const ProductDetail = () => {
                   className="ui fluid image"
                   src={product.image.src}
                   alt={title}
+                  loading="lazy"
                 />
               </div>
               <div className="column rp">
