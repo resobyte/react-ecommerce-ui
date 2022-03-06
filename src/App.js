@@ -1,8 +1,8 @@
 import "./App.scss";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./containers/Header";
-import ProductListing from "./containers/ProductListing";
-import ProductDetail from "./containers/ProductDetail";
+import Header from "./components/Header";
+import ProductListing from "./components/ProductListing";
+import ProductDetail from "./components/ProductDetail";
 
 function App() {
   return (
