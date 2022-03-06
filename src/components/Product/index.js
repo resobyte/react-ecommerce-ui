@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import LoadingIndicator from "../LoadingIndicator";
 
-const ProductComponent = ({ searchTerm }) => {
+const ProductComponent = ({ searchTerm, pagesVisited, productPerPage }) => {
   const products = useSelector((state) => state.allProducts.products);
   const renderList = products
     .filter((val) => {
@@ -15,6 +15,7 @@ const ProductComponent = ({ searchTerm }) => {
           .includes(searchTerm && searchTerm.toLowerCase());
       }
     })
+    .slice(pagesVisited, pagesVisited + productPerPage)
     .map((product) => {
       const { id, title } = product;
       const { price, category } = product.variants[0];
@@ -42,11 +43,7 @@ const ProductComponent = ({ searchTerm }) => {
   return (
     <>
       {" "}
-      {Object.keys(products).length === 0 ? (
-      <LoadingIndicator/>
-      ) : (
-         renderList 
-      )}
+      {Object.keys(products).length === 0 ? <LoadingIndicator /> : renderList}
     </>
   );
 };
